@@ -1,4 +1,6 @@
-# ARM
+High Availability provisioning
+
+End-to-End deployment of Availability Group for SQL Servers on Azure Virtual Machines
 
 Prerequisites
 1. A Virtual Network
