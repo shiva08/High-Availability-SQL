@@ -1,4 +1,4 @@
-High Availability provisioning
+[High Availability provisioning]
 
 End-to-End deployment of Availability Group for SQL Servers on Azure Virtual Machines.
 
