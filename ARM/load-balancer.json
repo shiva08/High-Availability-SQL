@@ -1,0 +1,52 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        },
+        "sku": {
+            "type": "string"
+        },
+        "tier": {
+            "type": "string"
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2021-02-01",
+            "name": "[parameters('name')]",
+            "type": "Microsoft.Network/loadBalancers",
+            "location": "[parameters('location')]",
+            "dependsOn": [],
+            "tags": {},
+            "properties": {
+                "frontendIPConfigurations": [
+                    {
+                        "name": "load1-frontend-ip",
+                        "properties": {
+                            "privateIPAddress": null,
+                            "privateIPAddressVersion": "IPv4",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "subnet": {
+                                "id": "/subscriptions/0009fc4d-e310-4e40-8e63-c48a23e9cdc1/resourceGroups/SQL-HA-RG/providers/Microsoft.Network/virtualNetworks/SQLHAVNET1/subnets/DC-Subnet"
+                            }
+                        }
+                    }
+                ],
+                "backendAddressPools": [],
+                "probes": [],
+                "loadBalancingRules": [],
+                "inboundNatRules": [],
+                "outboundRules": []
+            },
+            "sku": {
+                "name": "[parameters('sku')]",
+                "tier": "[parameters('tier')]"
+            }
+        }
+    ]
+}
