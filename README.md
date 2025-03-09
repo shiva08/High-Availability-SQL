@@ -1,7 +1,7 @@
 **High Availability provisioning**
 
 End-to-End deployment of Availability Group for SQL Servers on Azure Virtual Machines.<br>
-Added helpers to test High Availability.  <br>
+Added quick scripts/helpers to test High Availability.  <br>
 Any team can create their own infrastructure and test HA in parallel mode with this runner with just a click. Images team, NetCore, Backup teams are testing HA without involving HA team
 
 Prerequisites
